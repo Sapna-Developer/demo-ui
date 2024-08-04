@@ -1,0 +1,40 @@
+<div class="services-container">
+  <div class="services-intro">
+    <h2>OUR SERVICES</h2>
+    <p>We provide great services for our customers based on needs</p>
+  </div>
+</div>
+<div class="services-list">
+  <div
+    class="service-card"
+    *ngFor="let service of services; let i = index"
+    [ngClass]="getCardClass(i)"
+  >
+    <img [src]="service.imgSrc" alt="{{ service.title }}" />
+    <h3>{{ service.title }}</h3>
+    <p>{{ service.description }}</p>
+    <a href="default.asp" target="_blank" (click)="loadServices()">
+      Load More <span>&#8594;</span>
+    </a>
+  </div>
+  <div class="bg-img">
+    <img src="assets/services/group101.png" alt="" />
+  </div>
+</div>
+
+<!-- Testimonial Section -->
+<div class="testimonial-section">
+  <div class="testimonial">
+    <img class="testimonial-profile" src="{{ testimonial.profile }}" alt="" />
+    <div class="testimonial-content">
+      <div class="testimonial-rating">
+        <span class="star" *ngFor="let star of stars">&#9733;</span>
+      </div>
+      <p class="testimonial-description">{{ testimonial.description }}</p>
+      <p class="testimonial-author">
+        <strong>{{ testimonial.name }}</strong
+        >-{{ testimonial.designation }}
+      </p>
+    </div>
+  </div>
+</div>

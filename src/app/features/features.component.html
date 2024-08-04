@@ -1,0 +1,40 @@
+<div class="feature-container">
+  <div class="top-section">
+    <h2>WHY CHOOSE US</h2>
+    <p>People choose us because we serve the best for everyone.</p>
+  </div>
+
+  <div class="icons-section">
+    <div class="icon-feature">
+      <div class="feature" *ngFor="let feature of features">
+        <!-- <div class="feature"> -->
+        <img
+          class="feature-icon"
+          [src]="feature.imgSrc"
+          alt="{{ feature.title }}"
+        />
+        <div class="feature-content">
+          <div class="feature-title">
+            <h3>{{ feature.title }}</h3>
+          </div>
+          <p class="feature-description">{{ feature.description }}</p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <hr class="divider-line" />
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Launch Your Project?</h2>
+        <p>
+          With lots of unique blocks, you can easily build a page without
+          coding. Build your next landing page.
+        </p>
+      </div>
+      <div class="cta-button">
+        <button>Get Started</button>
+      </div>
+    </div>
+  </div>
+</div>

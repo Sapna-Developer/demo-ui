@@ -1,0 +1,21 @@
+<div class="work-container">
+  <div class="work-section">
+    <h2>CASE STUDIES</h2>
+    <p>Our works describe why we are the best in the business.</p>
+  </div>
+  <div class="magazine-grid">
+    <div
+      class="magazine-item magazine-item-large"
+      *ngFor="let magazine of magazines"
+    >
+      <img [src]="magazine.imgSrc" [alt]="magazine.title" />
+      <div class="magazine-content">
+        <h3>{{ magazine.title }}</h3>
+        <p>{{ magazine.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="see-all">
+    <a href="/all-works">See All Works</a><span>&#8594;</span>
+  </div>
+</div>
